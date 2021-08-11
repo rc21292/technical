@@ -11,14 +11,14 @@
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', 'PostController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['admin']], function () {
-    Route::get('create-post', 'PostController@create');
+    Route::get('create-post', 'PostController@create')->name('post.create');
     Route::post('save-post', 'PostController@store')->name('post.save');
 });
 

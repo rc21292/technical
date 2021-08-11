@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ route('post.create') }}">Create Post</a>
                 </div>
             </div>
         </div>
